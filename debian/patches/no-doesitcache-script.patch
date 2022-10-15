@@ -8,13 +8,13 @@ Don't install the undocumented and unnecessary doesitcache script.
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/setup.py b/setup.py
-index e453145..5a51e0c 100644
+index 779d9bf..e002c24 100644
 --- a/setup.py
 +++ b/setup.py
 @@ -23,7 +23,7 @@ setup_params = dict(
      long_description=long_description,
      install_requires=["requests", "msgpack>=0.5.2"],
-     extras_require={"filecache": ["lockfile>=0.9"], "redis": ["redis>=2.10.5"]},
+     extras_require={"filecache": ["filelock>=3.8.0"], "redis": ["redis>=2.10.5"]},
 -    entry_points={"console_scripts": ["doesitcache = cachecontrol._cmd:main"]},
 +    ## entry_points={"console_scripts": ["doesitcache = cachecontrol._cmd:main"]},
      python_requires=">=3.6",

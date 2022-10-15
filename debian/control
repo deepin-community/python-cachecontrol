@@ -8,15 +8,15 @@ Build-Depends:
  debhelper-compat (= 13),
  dh-python,
  python3-all,
- python3-cherrypy3,
- python3-lockfile,
- python3-mock,
- python3-msgpack,
- python3-pytest,
- python3-redis,
- python3-requests,
+ python3-cherrypy3 <!nocheck>,
+ python3-filelock <!nocheck>,
+ python3-mock <!nocheck>,
+ python3-msgpack <!nocheck>,
+ python3-pytest <!nocheck>,
+ python3-redis <!nocheck>,
+ python3-requests <!nocheck>,
  python3-setuptools
-Standards-Version: 4.6.0
+Standards-Version: 4.6.1
 Rules-Requires-Root: no
 Vcs-Git: https://salsa.debian.org/python-team/packages/python-cachecontrol.git
 Vcs-Browser: https://salsa.debian.org/python-team/packages/python-cachecontrol

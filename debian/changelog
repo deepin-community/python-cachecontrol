@@ -1,3 +1,32 @@
+python-cachecontrol (0.12.12-2deepin) unstable; urgency=medium
+
+  * Update 0.12.12-2
+
+ -- Tianyu Chen <chentianyu1@uniontech.com>  Wed, 15 Feb 2023 16:59:43 +0800
+
+python-cachecontrol (0.12.12-2) unstable; urgency=medium
+
+  * Support the nocheck build profile.
+
+ -- Stefano Rivera <stefanor@debian.org>  Sat, 15 Oct 2022 22:28:11 +0200
+
+python-cachecontrol (0.12.12-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Refresh patches.
+  * Switch Build-Depends from python3-lockfile to python3-filelock, following
+    upstream.
+  * Bump Standards-Version to 4.6.1, no changes needed.
+  * Update copyright.
+
+ -- Stefano Rivera <stefanor@debian.org>  Tue, 13 Sep 2022 11:26:38 +0200
+
+python-cachecontrol (0.12.11-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Stefano Rivera <stefanor@debian.org>  Thu, 21 Apr 2022 23:27:00 -0400
+
 python-cachecontrol (0.12.10-1) unstable; urgency=medium
 
   * New upstream release.
