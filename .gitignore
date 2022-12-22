@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2015 Eric Larson
+#
+# SPDX-License-Identifier: Apache-2.0
+
+.DS_Store
+*.pyc
+*.pyo
+*.egg-info/*
+dist
+bin
+lib
+lib64
+include
+.Python
+docs/_build
+build/
+.tox

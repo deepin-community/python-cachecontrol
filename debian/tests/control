@@ -1,0 +1,10 @@
+Tests: unittests3
+Depends:
+ python3-all,
+ python3-cachecontrol,
+ python3-cherrypy3,
+ python3-lockfile,
+ python3-mock,
+ python3-pytest,
+ python3-redis
+Restrictions: allow-stderr

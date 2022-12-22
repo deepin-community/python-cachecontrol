@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+
+export PYBUILD_NAME=cachecontrol
+export PYBUILD_AFTER_TEST=rm -rf {build_dir}/web_cache
+#export PYBUILD_VERBOSE=1
+#export DH_VERBOSE=1
+
+
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_auto_test:
+	http_proxy= https_proxy= dh_auto_test

@@ -1,0 +1,10 @@
+---
+Bug-Database: https://github.com/ionrock/cachecontrol/issues
+Bug-Submit: https://github.com/ionrock/cachecontrol/issues/new
+Changelog: https://cachecontrol.readthedocs.io/en/latest/release_notes.html
+Documentation: cachecontrol.readthedocs.org/en/latest/
+Registry:
+  - Name: PyPI
+    Entry: cachecontrol
+Repository: https://github.com/ionrock/cachecontrol.git
+Repository-Browse: https://github.com/ionrock/cachecontrol

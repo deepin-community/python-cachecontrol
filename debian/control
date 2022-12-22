@@ -1,0 +1,36 @@
+Source: python-cachecontrol
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Stefano Rivera <stefanor@debian.org>
+Homepage: https://github.com/ionrock/cachecontrol
+Section: python
+Priority: optional
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-python,
+ python3-all,
+ python3-cherrypy3,
+ python3-lockfile,
+ python3-mock,
+ python3-msgpack,
+ python3-pytest,
+ python3-redis,
+ python3-requests,
+ python3-setuptools
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-cachecontrol.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-cachecontrol
+Testsuite: autopkgtest-pkg-python
+
+Package: python3-cachecontrol
+Architecture: all
+Depends: python3-requests, ${misc:Depends}, ${python3:Depends}
+Description: caching algorithms in httplib2 for use with requests
+ CacheControl is a port of the caching algorithms in httplib2 for use with
+ requests session object.
+ .
+ It was written because httplib2's better support for caching is often
+ mitigated by its lack of threadsafety. The same is true of requests in
+ terms of caching.
+ .
+ This is the Python 3 library.

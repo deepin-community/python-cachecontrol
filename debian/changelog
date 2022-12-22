@@ -1,0 +1,121 @@
+python-cachecontrol (0.12.10-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Stefano Rivera <stefanor@debian.org>  Sat, 06 Nov 2021 21:43:48 -0700
+
+python-cachecontrol (0.12.9-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Stefano Rivera <stefanor@debian.org>  Wed, 03 Nov 2021 10:50:47 -0700
+
+python-cachecontrol (0.12.8-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Refresh patches.
+  * Drop patch avoid-httpbin, accepted upstream.
+  * Flesh out UMEGAYA a little.
+  * Drop +ds suffix again, for new upstream release.
+  * Drop Copyright from the first line of License in debian/copyright.
+
+ -- Stefano Rivera <stefanor@debian.org>  Sat, 30 Oct 2021 09:17:05 -0700
+
+python-cachecontrol (0.12.6+ds-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Debian Janitor ]
+  * Remove MIA uploader Barry Warsaw <barry@debian.org>. Closes: #970169
+  * Bump debhelper from old 12 to 13.
+
+  [ Stefano Rivera ]
+  * Adopt package, it needs a human maintainer.
+  * Bump standards version to 4.6.0, no changes needed.
+  * Switch to source from GitHub (+ds for now), with upstream test suite.
+  * Build-Depend on python3-{cherrypy,lockfile,mock,pytest,redis}, to run
+    upstream test suite.
+  * Unset http[s]_proxy for tests, usually set by pybuild.
+  * Patch avoid-httpbin.patch: Use a local test endpoint instead of
+    httpbin.org.
+  * Add autopkgtests to run upstream test suite.
+  * Don't ship web_cache seeded by the test suite.
+
+ -- Stefano Rivera <stefanor@debian.org>  Wed, 15 Sep 2021 17:14:00 -0700
+
+python-cachecontrol (0.12.6-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.12.6
+  * Rebase patch
+  * Add python3-msgpack as build-dependency
+  * Add Rules-Requires-Root: no
+  * Update Standards-Version to 4.5.0
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse
+
+ -- Håvard Flaget Aasen <haavard_aasen@yahoo.no>  Sat, 25 Jan 2020 08:45:32 +0100
+
+python-cachecontrol (0.11.7-2) unstable; urgency=medium
+
+  * Team upload.
+  [ Barry Warsaw ]
+  * d/control: Put DPMT in Maintainers and myself in Uploaders.
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+  * d/watch: Use https protocol
+  * d/control: Remove ancient X-Python-Version field
+  * d/control: Remove ancient X-Python3-Version field
+  * Convert git repository from git-dpm to gbp layout
+  * Use debhelper-compat instead of debian/compat.
+  * Drop Python 2 support (Closes: #937626).
+  * Bump debhelper compat level to 12.
+  * Enable autopkgtest-pkg-python testsuite.
+  * Bump standards version to 4.4.0.
+
+ -- Ondřej Nový <onovy@debian.org>  Thu, 12 Sep 2019 14:39:21 +0200
+
+python-cachecontrol (0.11.7-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+
+  [ Barry Warsaw ]
+  * New upstream release.
+  * d/control: Bump Standards-Version with no other changes necessary.
+  * d/patches/no-doesitcache-script.patch: Exclude usr/bin/doesitcache, an
+    undocumented and unnecessary command line script.
+
+ -- Barry Warsaw <barry@debian.org>  Mon, 31 Oct 2016 16:37:49 -0400
+
+python-cachecontrol (0.11.5-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add python-requests to Build-Depends. (Closes: #802145)
+  * Removed some underscores from long description. (Closes: #799531)
+
+ -- Andreas Tille <tille@debian.org>  Mon, 26 Oct 2015 10:51:48 +0100
+
+python-cachecontrol (0.11.5-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Barry Warsaw <barry@debian.org>  Mon, 01 Jun 2015 15:48:03 -0400
+
+python-cachecontrol (0.11.4-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Barry Warsaw <barry@debian.org>  Mon, 18 May 2015 14:08:10 -0400
+
+python-cachecontrol (0.11.3-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #785059)
+
+ -- Barry Warsaw <barry@debian.org>  Fri, 15 May 2015 18:24:27 -0400
