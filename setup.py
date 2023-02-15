@@ -6,7 +6,7 @@ import setuptools
 
 long_description = open("README.rst").read()
 
-VERSION = "0.12.10"
+VERSION = "0.12.12"
 
 setup_params = dict(
     name="CacheControl",
@@ -22,7 +22,7 @@ setup_params = dict(
     description="httplib2 caching for requests",
     long_description=long_description,
     install_requires=["requests", "msgpack>=0.5.2"],
-    extras_require={"filecache": ["lockfile>=0.9"], "redis": ["redis>=2.10.5"]},
+    extras_require={"filecache": ["filelock>=3.8.0"], "redis": ["redis>=2.10.5"]},
     entry_points={"console_scripts": ["doesitcache = cachecontrol._cmd:main"]},
     python_requires=">=3.6",
     classifiers=[
