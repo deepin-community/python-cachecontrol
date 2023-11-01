@@ -7,7 +7,34 @@
  Release Notes
 ===============
 
+0.13.1
+======
+
+* Support for old serialization formats has been removed.
+* Move the serialization implementation into own method.
+* Drop support for Python older than 3.7.
+
 0.13.0
+======
+
+**YANKED**
+
+The project has been moved to the `PSF <https://github.com/psf>`_ organization.
+
+* Discard the ``strict`` attribute when serializing and deserializing responses.
+* Fix the ``IncompleteRead`` error thrown by ``urllib3 2.0``.
+* Remove usage of ``utcnow`` in favor of timezone-aware datetimes.
+* Remove the ``compat`` module.
+* Use Python's ``unittest.mock`` library instead of ``mock``.
+* Add type annotations.
+* Exclude the ``tests`` directory from the wheel.
+
+0.12.11
+=======
+
+* Added new variant of ``FileCache``, ``SeparateBodyFileCache``, which uses less memory by storing the body in a separate file than metadata, and streaming data in and out directly to/from that file. Implemented by [Itamar Turner-Trauring](https://pythonspeed.com), work sponsored by [G-Research](https://www.gresearch.co.uk/technology-innovation-and-open-source/).
+
+0.12.7
 ======
 
 * Dropped support for Python 2.7, 3.4, 3.5.

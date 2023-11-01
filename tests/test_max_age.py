@@ -2,26 +2,15 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-from __future__ import print_function
 import pytest
 
 from requests import Session
 from cachecontrol.adapter import CacheControlAdapter
 from cachecontrol.cache import DictCache
+from .utils import NullSerializer
 
 
-class NullSerializer(object):
-
-    def dumps(self, request, response, body=None):
-        return response
-
-    def loads(self, request, data):
-        if data and getattr(data, "chunked", False):
-            data.chunked = False
-        return data
-
-
-class TestMaxAge(object):
+class TestMaxAge:
 
     @pytest.fixture()
     def sess(self, url):

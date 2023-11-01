@@ -28,7 +28,7 @@ FileCache
 =========
 
 The `FileCache` is similar to the caching mechanism provided by
-httplib2_. It requires `lockfile`_ be installed as it prevents
+httplib2_. It requires `filelock`_ be installed as it prevents
 multiple threads from writing to the same file at the same time.
 
 .. note::
@@ -56,17 +56,33 @@ helpful in testing. Here is an example of how to use it: ::
   forever_cache = FileCache('.web_cache', forever=True)
   sess = CacheControl(requests.Session(), forever_cache)
 
+SeparateBodyFileCache
+=====================
 
-:A Note About Pickle:
+This is similar to ``FileCache``, but far more memory efficient, and therefore recommended if you expect to be caching large downloads.
+``FileCache`` results in memory usage that can be 2× or 3× of the downloaded file, whereas ``SeparateBodyFileCache`` should have fixed memory usage.
 
-  It should be noted that the `FileCache` uses pickle to store the
-  cached response. Prior to `requests 2.1`_, `requests.Response`
-  objects were not 'pickleable' due to the use of `IOBase` base
-  classes in `urllib3` `HTTPResponse` objects. In CacheControl we work
-  around this by patching the Response objects with the appropriate
-  `__getstate__` and `__setstate__` methods when the requests version
-  doesn't natively support Response pickling.
+The body of the request is stored in a separate file than metadata, and streamed in and out.
 
+It requires `filelock`_ be installed as it prevents multiple threads from writing to the same file at the same time.
+
+.. note::
+
+  You can install this dependency automatically with pip
+  by requesting the *filecache* extra: ::
+
+    pip install cachecontrol[filecache]
+
+Here is an example of using the cache::
+
+  import requests
+  from cachecontrol import CacheControl
+  from cachecontrol.caches SeparateBodyFileCache
+
+  sess = CacheControl(requests.Session(),
+                      cache=SeparatedBodyFileCache('.web_cache'))
+
+``SeparateBodyFileCache`` supports the same options as ``FileCache``.
 
 
 RedisCache
@@ -111,7 +127,7 @@ Third-Party Cache Providers
 
 
 .. _httplib2: https://github.com/httplib2/httplib2
-.. _lockfile: https://github.com/smontanaro/pylockfile
+.. _filelock: https://github.com/tox-dev/py-filelock
 .. _requests 2.1: http://docs.python-requests.org/en/latest/community/updates/#id2
 .. _redis: https://github.com/andymccurdy/redis-py
 .. _cachecontrol-django: https://github.com/glassesdirect/cachecontrol-django

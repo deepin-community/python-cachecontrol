@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-import mock
+from unittest import mock
 import pytest
 
 from requests import Session
@@ -34,7 +34,7 @@ def sess(url, request):
     sess.close()
 
 
-class TestSessionActions(object):
+class TestSessionActions:
 
     def test_get_caches(self, url, sess):
         r2 = sess.get(url)
