@@ -3,7 +3,7 @@ Upstream-Name: CacheControl
 Source: https://github.com/ionrock/cachecontrol
 
 Files: *
-Copyright: 2015-2022 Eric Larson
+Copyright: 2015-2025 Eric Larson
 License: Apache-2.0
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ License: Apache-2.0
 
 Files: debian/*
 Copyright: 2015      Barry Warsaw <barry@debian.org>
-           2021-2022 Stefano Rivera <stefanor@debian.org>
+           2021-2025 Stefano Rivera <stefanor@debian.org>
 License: Expat
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal

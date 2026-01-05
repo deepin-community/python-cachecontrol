@@ -5,19 +5,17 @@
 VENV=.venv
 VENV_CMD=python3 -m venv
 ACTIVATE = $(VENV)/bin/activate
-CHEESE=https://pypi.python.org/pypi
-BUMPTYPE=patch
-BUMPPRE=0
 
-
-$(VENV)/bin/pip3:
+$(VENV)/bin/pip:
 	$(VENV_CMD) $(VENV)
 
-bootstrap: $(VENV)/bin/pip3
-	$(VENV)/bin/pip3 install -e .[dev]
+bootstrap: $(VENV)/bin/pip
+	$(VENV)/bin/pip install -e .[dev]
 
 format:
-	$(VENV)/bin/black .
+	$(VENV)/bin/codespell
+	$(VENV)/bin/ruff check --fix
+	$(VENV)/bin/ruff format
 
 doc: $(VENV)/bin/sphinx-build
 	. $(ACTIVATE);

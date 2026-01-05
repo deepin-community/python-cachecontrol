@@ -8,10 +8,10 @@ Don't install the undocumented and unnecessary doesitcache script.
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/pyproject.toml b/pyproject.toml
-index ef55536..e44db2a 100644
+index d8890eb..8fd3861 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
-@@ -62,7 +62,7 @@ dev = [
+@@ -64,7 +64,7 @@ dev = [
  ]
  
  [project.scripts]
