@@ -5,6 +5,7 @@
 """
 Unit tests that verify FileCache storage works correctly.
 """
+
 import os
 import string
 
@@ -25,7 +26,6 @@ def randomdata():
 
 
 class FileCacheTestsMixin:
-
     FileCacheClass = None  # Either FileCache or SeparateBodyFileCache
 
     @pytest.fixture()

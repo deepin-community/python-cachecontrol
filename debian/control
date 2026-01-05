@@ -12,12 +12,11 @@ Build-Depends:
  python3-all,
  python3-cherrypy3 <!nocheck>,
  python3-filelock <!nocheck>,
- python3-mock <!nocheck>,
  python3-msgpack <!nocheck>,
  python3-pytest <!nocheck>,
  python3-redis <!nocheck>,
  python3-requests <!nocheck>,
-Standards-Version: 4.6.2
+Standards-Version: 4.7.2
 Rules-Requires-Root: no
 Vcs-Git: https://salsa.debian.org/python-team/packages/python-cachecontrol.git
 Vcs-Browser: https://salsa.debian.org/python-team/packages/python-cachecontrol

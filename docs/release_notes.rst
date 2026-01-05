@@ -7,6 +7,28 @@
  Release Notes
 ===============
 
+0.14.3
+======
+
+* Drop support for Python 3.8.
+
+0.14.2
+======
+
+* Eliminate a race condition when overwriting cache entries.
+* Fix a ``requests`` object leak when doing caching on a streamed response
+
+0.14.1
+======
+
+* Explicitly support Python 3.13.
+
+0.14.0
+======
+
+* Explicitly allow ``pathlib.Path`` as a type for ``FileCache.directory``.
+* Don't use the cache to return a full response if a request has a Range header.
+
 0.13.1
 ======
 
@@ -28,6 +50,18 @@ The project has been moved to the `PSF <https://github.com/psf>`_ organization.
 * Use Python's ``unittest.mock`` library instead of ``mock``.
 * Add type annotations.
 * Exclude the ``tests`` directory from the wheel.
+
+0.12.14
+=======
+
+* Revert the change "switch lockfile to filelock" to fix the compatibility issue.
+
+0.12.13
+=======
+
+* Discard the ``strict`` attribute when serializing and deserializing responses.
+* Fix the IncompleteRead error thrown by ``urllib3`` 2.0.
+* Exclude the tests directory from the wheel.
 
 0.12.11
 =======
